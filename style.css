@@ -1,0 +1,145 @@
+/* Import modern Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global styles */
+body, html, .stApp {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #e0e5ec;
+    color: #2c3e50;
+}
+
+/* NEUMORPHIC CARD */
+.neumorphic-box {
+    background: #e0e5ec;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* GLOWING PROJECT CARD */
+.project-card {
+    position: relative;
+    background: #e0e5ec;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px #6c757d;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px;
+    right: -2px; bottom: -2px;
+    background: linear-gradient(45deg, #ced4da, #6c757d, #495057, #343a40);
+    z-index: -1;
+    border-radius: 18px;
+    filter: blur(10px);
+    animation: glowBorder 6s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes glowBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.project-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    background-color: #f6f6f6;
+    color: #040f0f;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Project link style (changed to black) */
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #343a40 !important;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-link:hover {
+    color: #212529;
+    text-decoration: underline;
+}
+
+/* Contact Form Embed */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #e0e5ec;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+}
+
+/* Skill Grid Fix */
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-box {
+    flex: 1;
+    min-width: 250px;
+    background: #e0e5ec;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 8px 8px 16px #a3b1c6, -8px -8px 16px #ffffff;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+/* Optional section animation */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out both;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+    }
+    .neumorphic-box {
+        padding: 15px;
+    }
+}
