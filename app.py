@@ -45,9 +45,7 @@ def about_section():
     st.header("👋 About Me")
     st.markdown("""
     <div class='neumorphic-box slide-in'>
-        I'm a results-driven Business Intelligence professional with over 1 year of experience in data analytics,
-        visualization, modeling, reporting, web scraping, and working with AI tools. I love turning data into
-        actionable insights that drive real business results.
+        I'm a results-driven Business Intelligence professional with over 1 year of hands-on experience in data analytics, visualization, modeling, reporting, web scraping, and working with AI tools. I enjoy turning complex data into simple, useful dashboards and reports that solve real-world problems and help businesses make data-driven decisions. I'm passionate about using automation and AI to make work easier and help companies to grow.
     </div>
     """, unsafe_allow_html=True)
 
